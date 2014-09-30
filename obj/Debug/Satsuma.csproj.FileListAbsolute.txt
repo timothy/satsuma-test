@@ -1,0 +1,6 @@
+C:\Users\mdraper16\Desktop\test\satsumagraph-code\bin\Debug\Satsuma.xml
+C:\Users\mdraper16\Desktop\test\satsumagraph-code\bin\Debug\Satsuma.dll
+C:\Users\mdraper16\Desktop\test\satsumagraph-code\bin\Debug\Satsuma.pdb
+C:\Users\mdraper16\Desktop\test\satsumagraph-code\obj\Debug\Satsuma.csprojResolveAssemblyReference.cache
+C:\Users\mdraper16\Desktop\test\satsumagraph-code\obj\Debug\Satsuma.dll
+C:\Users\mdraper16\Desktop\test\satsumagraph-code\obj\Debug\Satsuma.pdb
