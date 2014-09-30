@@ -1,13 +1,14 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Satsuma;
 
 namespace Satsuma.Test
 {
 	[TestClass]
-	public class UnitTest1
+	public class AStarTest
 	{
 		[TestMethod]
-		public void TestMethod1()
+		public void AStarTest1()
 		{
 		}
 	}
