@@ -50,8 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="tests\AStarTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tests\CompleteGraphTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Satsuma.csproj">
