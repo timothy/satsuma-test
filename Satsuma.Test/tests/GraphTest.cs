@@ -9,7 +9,7 @@ using Satsuma;
 namespace Satsuma.Test
 {
     [TestClass]
-    public class CompleteGraphTest
+    public class GraphTest
     {
         [TestMethod]
         public void FalseNodeID()
