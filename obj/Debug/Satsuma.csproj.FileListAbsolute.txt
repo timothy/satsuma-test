@@ -10,3 +10,9 @@ C:\Users\Wesley\Desktop\satsuma-test\bin\Debug\Satsuma.pdb
 C:\Users\Wesley\Desktop\satsuma-test\obj\Debug\Satsuma.csprojResolveAssemblyReference.cache
 C:\Users\Wesley\Desktop\satsuma-test\obj\Debug\Satsuma.dll
 C:\Users\Wesley\Desktop\satsuma-test\obj\Debug\Satsuma.pdb
+D:\school\testing\bin\Debug\Satsuma.xml
+D:\school\testing\bin\Debug\Satsuma.dll
+D:\school\testing\bin\Debug\Satsuma.pdb
+D:\school\testing\obj\Debug\Satsuma.csprojResolveAssemblyReference.cache
+D:\school\testing\obj\Debug\Satsuma.dll
+D:\school\testing\obj\Debug\Satsuma.pdb
