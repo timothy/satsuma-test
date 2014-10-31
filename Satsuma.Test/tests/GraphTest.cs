@@ -107,5 +107,23 @@ namespace Satsuma.Test
 
             Assert.AreEqual(-234, a1.Id);
         }
+
+        [TestMethod]
+        public void NegativeArcIDToString()
+        {
+            var a1 = new Arc(-353);
+
+            Assert.AreEqual("|-353", a1.ToString());
+        }
+
+        [TestMethod]
+        public void ArcID_Mult()
+        {
+            var a1 = new Arc(3);
+            var a2 = new Arc(5);
+            var a3 = new Arc(a1.Id*a2.Id);
+
+            Assert.AreEqual(15, a3.Id);
+        }
     }
 }
