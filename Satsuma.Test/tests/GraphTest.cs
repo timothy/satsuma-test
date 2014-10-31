@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -61,7 +62,7 @@ namespace Satsuma.Test
         {
             var n1 = new Node(10);
             var n2 = new Node(15);
-            var n3 = new Node(n1.Id * n2.Id);
+            var n3 = new Node(n1.Id*n2.Id);
 
             Assert.AreEqual(150, n3.Id);
         }
@@ -124,6 +125,24 @@ namespace Satsuma.Test
             var a3 = new Arc(a1.Id*a2.Id);
 
             Assert.AreEqual(15, a3.Id);
+        }
+
+        [TestMethod]
+        public void VeryLongArcID()
+        {
+            var a1 = new Arc(9223372036854775807);
+
+            Assert.AreEqual(9223372036854775807, a1.Id);
+
+            //That is Int64.MaxValue
+        }
+
+        [TestMethod]
+        public void ArcID_0()
+        {
+            var a1 = new Arc(0);
+
+            Assert.AreEqual(0, a1.Id);
         }
     }
 }
