@@ -90,5 +90,22 @@ namespace Satsuma.Test
 
             Assert.IsFalse(a1.Equals(a2));
         }
+
+        [TestMethod]
+        public void TrueArcID()
+        {
+            var a1 = new Arc(3534);
+            var a2 = new Arc(3534);
+
+            Assert.IsTrue(a1.Equals(a2));
+        }
+
+        [TestMethod]
+        public void NegativeArcID()
+        {
+            var a1 = new Arc(-234);
+
+            Assert.AreEqual(-234, a1.Id);
+        }
     }
 }
