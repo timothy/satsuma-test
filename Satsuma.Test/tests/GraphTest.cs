@@ -81,5 +81,14 @@ namespace Satsuma.Test
 
             Assert.AreEqual("|10", a1.ToString());
         }
+
+        [TestMethod]
+        public void FalseArcID()
+        {
+            var a1 = new Arc(1);
+            var a2 = new Arc(20);
+
+            Assert.IsFalse(a1.Equals(a2));
+        }
     }
 }
