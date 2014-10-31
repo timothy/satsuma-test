@@ -12,10 +12,10 @@ namespace Satsuma.Test.tests
         [TestMethod]
         public void TestCreateReverse()
         {
-            var c = new CompleteGraph(5,Directedness.Directed);
+            var c = new CompleteGraph(1,Directedness.Directed);
             var g = new ReverseGraph(c);
 
-            Assert.AreEqual(g.NodeCount(), 5); //test that a graph with 5 nodes is created
+            Assert.AreEqual(g.NodeCount(), 1); //test that a graph with 5 nodes is created
         }
 
         [TestMethod]
@@ -46,6 +46,18 @@ namespace Satsuma.Test.tests
 
             Assert.AreEqual(g.NodeCount(), numofnodes); //is there a max number of nodes that the graph can hold?
         }
+
+        [TestMethod]
+        public void TestMaxNodes()
+        {
+            var c = new CompleteGraph(Int32.MaxValue, Directedness.Directed);
+            var g = new ReverseGraph(c);
+
+            Assert.AreEqual(g.NodeCount(), Int32.MaxValue); //test that a graph with 5 nodes is created
+        }
+
+
+
 
 
     }
