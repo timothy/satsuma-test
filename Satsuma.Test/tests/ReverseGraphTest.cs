@@ -39,10 +39,12 @@ namespace Satsuma.Test.tests
         [TestMethod]
         public void TestHighNumberOfNodes()
         {
-            var c = new CompleteGraph(1000, Directedness.Directed);
+            const int numofnodes = 1000;
+
+            var c = new CompleteGraph(numofnodes, Directedness.Directed);
             var g = new ReverseGraph(c);
 
-            Assert.AreEqual(g.NodeCount(), 1000);
+            Assert.AreEqual(g.NodeCount(), numofnodes); //is there a max number of nodes that the graph can hold?
         }
 
 
