@@ -72,6 +72,19 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
+        public void UndirectedAllHighNumberOfNodes()
+        {
+            const int NumOfNodes = 10000;
+
+            var c = new CompleteGraph(NumOfNodes, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.All);
+
+            Assert.AreEqual(NumOfNodes * 2, arcs);
+        }
+
+        [TestMethod]
         public void UndirectedEdge()
         {
             var c = new CompleteGraph(5, Directedness.Undirected);
@@ -80,6 +93,19 @@ namespace Satsuma.Test.tests
             int arcs = g.ArcCount(ArcFilter.Edge);
 
             Assert.AreEqual(10, arcs);
+        }
+
+        [TestMethod]
+        public void UndirectedEdgeHighNumberOfNodes()
+        {
+            const int NumOfNodes = 10000;
+
+            var c = new CompleteGraph(NumOfNodes, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.Edge);
+
+            Assert.AreEqual(NumOfNodes * 2, arcs);
         }
 
         [TestMethod]
