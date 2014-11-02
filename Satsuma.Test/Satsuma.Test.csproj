@@ -62,8 +62,9 @@
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_Arcs_OneNode.cs" />
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_Arcs_ZeroNodes.cs" />
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_Nodes.cs" />
-    <Compile Include="tests\GraphTest.cs" />
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_Constructor.cs" />
+    <Compile Include="tests\GraphTests\Arcs.cs" />
+    <Compile Include="tests\GraphTests\Nodes.cs" />
     <Compile Include="tests\ReverseGraphTest.cs" />
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_GetNode.cs" />
   </ItemGroup>
