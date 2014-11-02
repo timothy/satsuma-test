@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Satsuma.Test.tests.CompleteGraphTests
 {
 	[TestClass]
-	public class CompleteGraphGetArc
+	public class CompleteGraph_GetArc
 	{
 		[TestMethod]
 		public void UndirectedEqual()

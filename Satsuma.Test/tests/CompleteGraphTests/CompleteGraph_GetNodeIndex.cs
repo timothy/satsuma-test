@@ -6,7 +6,7 @@ using Satsuma;
 namespace Satsuma.Test.tests
 {
 	[TestClass]
-	public class CompleteGraphGetNodeIndex
+	public class CompleteGraph_GetNodeIndex
 	{
 		[TestMethod]
 		public void IndexEquals()

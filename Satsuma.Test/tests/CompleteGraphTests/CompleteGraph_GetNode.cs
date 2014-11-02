@@ -7,7 +7,7 @@ using Satsuma;
 namespace Satsuma.Test.tests
 {
 	[TestClass]
-	public class CompleteGraphGetNodeTest
+	public class CompleteGraph_GetNode
 	{
 		[TestMethod]
 		public void GetNodeNormal()

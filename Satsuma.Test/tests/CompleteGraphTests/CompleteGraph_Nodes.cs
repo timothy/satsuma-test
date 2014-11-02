@@ -7,7 +7,7 @@ using System.Linq;
 namespace Satsuma.Test.tests.CompleteGraphTests
 {
 	[TestClass]
-	public class ConpleteGraphNodesTest
+	public class CompleteGraph_Nodes
 	{
 		[TestMethod]
 		public void ZeroNodes()

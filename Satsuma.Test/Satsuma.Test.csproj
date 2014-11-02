@@ -51,21 +51,21 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tests\CompleteGraphTests\CompleteGraphArcCount.cs" />
-    <Compile Include="tests\CompleteGraphTests\CompleteGraphArcLookupIsEdge.cs" />
-    <Compile Include="tests\CompleteGraphTests\CompleteGraphArcLookupUV.cs" />
-    <Compile Include="tests\CompleteGraphTests\CompleteGraphFiveNodesArcsTests.cs" />
-    <Compile Include="tests\CompleteGraphTests\CompleteGraphGetArc.cs" />
-    <Compile Include="tests\CompleteGraphTests\CompleteGraphGetNodeIndex.cs" />
-    <Compile Include="tests\CompleteGraphTests\CompleteGraphHasArc.cs" />
-    <Compile Include="tests\CompleteGraphTests\CompleteGraphHasNode.cs" />
-    <Compile Include="tests\CompleteGraphTests\CompleteGraphOneNodeArcsTests.cs" />
-    <Compile Include="tests\CompleteGraphTests\CompleteGraphZeroNodesArcsTests.cs" />
-    <Compile Include="tests\CompleteGraphTests\ConpleteGraphNodesTest.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_ArcCount.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_ArcLookup_IsEdge.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_ArcLookup_UV.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_Arcs_FiveNodes.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_GetArc.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_GetNodeIndex.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_HasArc.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_HasNode.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_Arcs_OneNode.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_Arcs_ZeroNodes.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_Nodes.cs" />
     <Compile Include="tests\GraphTest.cs" />
-    <Compile Include="tests\CompleteGraphTests\CompleteGraphConstructorTest.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_Constructor.cs" />
     <Compile Include="tests\ReverseGraphTest.cs" />
-    <Compile Include="tests\CompleteGraphTests\CompletegraphGetNodeTest.cs" />
+    <Compile Include="tests\CompleteGraphTests\CompleteGraph_GetNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Satsuma.csproj">

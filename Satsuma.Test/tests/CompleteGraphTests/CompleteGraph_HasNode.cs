@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Satsuma.Test.tests.CompleteGraphTests
 {
 	[TestClass]
-	public class CompleteGraphHasNode
+	public class CompleteGraph_HasNode
 	{
 		[TestMethod]
 		public void HasAllNodes()

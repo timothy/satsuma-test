@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Satsuma.Test.tests.CompleteGraphTests
 {
 	[TestClass]
-	public class CompleteGraphHasArc
+	public class CompleteGraph_HasArc
 	{
 		[TestMethod]
 		public void HasAllArcsUndirected()

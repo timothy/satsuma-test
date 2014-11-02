@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Satsuma.Test.tests.CompleteGraphTests
 {
 	[TestClass]
-	public class CompleteGraphArcLookupIsEdge
+	public class CompleteGraph_ArcLookup_IsEdge
 	{
 		[TestMethod]
 		public void IsEdgeUndirected()

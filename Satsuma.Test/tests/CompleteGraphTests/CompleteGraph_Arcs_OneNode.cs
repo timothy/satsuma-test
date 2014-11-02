@@ -6,7 +6,7 @@ using System.Linq;
 namespace Satsuma.Test.tests.CompleteGraphTests
 {
 	[TestClass]
-	public class CompleteGraphOneNodeArcsTests
+	public class CompleteGraph_Arcs_OneNode
 	{
 		#region arcs1
 		[TestMethod]

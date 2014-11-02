@@ -10,7 +10,7 @@ using Satsuma;
 namespace Satsuma.Test
 {
 	[TestClass]
-	public class CompleteGraphConstructorTest
+	public class CompleteGraph_Constructor
 	{
 		[TestMethod]
 		public void CreateUndirected()

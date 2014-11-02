@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Satsuma.Test.tests.CompleteGraphTests
 {
 	[TestClass]
-	public class CompleteGraphArcLookupUV
+	public class CompleteGraph_ArcLookup_UV
 	{
 		[TestMethod]
 		public void UndirectedU01()
