@@ -49,9 +49,33 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
+        public void IsEdgeUndirectedOneNode()
+        {
+            var c = new CompleteGraph(1, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            foreach (Arc a in g.Arcs(ArcFilter.All))
+            {
+                Assert.IsTrue(g.IsEdge(a));
+            }
+        }
+
+        [TestMethod]
         public void IsEdgeDirected()
         {
             var c = new CompleteGraph(5, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            foreach (Arc a in g.Arcs(ArcFilter.All))
+            {
+                Assert.IsFalse(g.IsEdge(a));
+            }
+        }
+
+        [TestMethod]
+        public void IsEdgeDirectedOneNode()
+        {
+            var c = new CompleteGraph(1, Directedness.Undirected);
             var g = new ReverseGraph(c);
 
             foreach (Arc a in g.Arcs(ArcFilter.All))
@@ -69,6 +93,17 @@ namespace Satsuma.Test.tests
             int arcs = g.ArcCount(ArcFilter.All);
 
             Assert.AreEqual(10, arcs);
+        }
+
+        [TestMethod]
+        public void UndirectedAllOneNode()
+        {
+            var c = new CompleteGraph(1, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.All);
+
+            Assert.AreEqual(0, arcs);
         }
 
         [TestMethod]
@@ -96,6 +131,17 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
+        public void UndirectedEdgeOneNode()
+        {
+            var c = new CompleteGraph(1, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.Edge);
+
+            Assert.AreEqual(0, arcs);
+        }
+
+        [TestMethod]
         public void UndirectedEdgeHighNumberOfNodes()
         {
             const int NumOfNodes = 10000;
@@ -120,6 +166,17 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
+        public void DirectedAllOneNode()
+        {
+            var c = new CompleteGraph(1, Directedness.Directed);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.All);
+
+            Assert.AreEqual(0, arcs);
+        }
+
+        [TestMethod]
         public void DirectedAllHighNumberOfNodes()
         {
             const int NumOfNodes = 10000;
@@ -141,6 +198,17 @@ namespace Satsuma.Test.tests
             int arcs = g.ArcCount(ArcFilter.Edge);
 
             Assert.AreEqual(10, arcs);
+        }
+
+        [TestMethod]
+        public void DirectedEdgeOneNode()
+        {
+            var c = new CompleteGraph(1, Directedness.Directed);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.Edge);
+
+            Assert.AreEqual(0, arcs);
         }
 
         [TestMethod]
