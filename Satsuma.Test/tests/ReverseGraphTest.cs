@@ -1,6 +1,4 @@
 ﻿//By Ty Harding
-
-
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
