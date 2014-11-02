@@ -17,7 +17,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void ZeroNumNodes()
+        public void ReverseGraphZeroNumNodes()
         {
 			var c = new CompleteGraph(0, Directedness.Directed);
             var g = new ReverseGraph(c);
@@ -26,7 +26,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void HighNumberOfNodes()
+        public void ReverseGraphHighNumberOfNodes()
         {
             const int numofnodes = 1000;
 
@@ -37,7 +37,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void IsEdgeUndirected()
+        public void ReverseGraphIsEdgeUndirected()
         {
             var c = new CompleteGraph(5, Directedness.Undirected);
             var g = new ReverseGraph(c);
@@ -49,7 +49,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void IsEdgeUndirectedOneNode()
+        public void ReverseGraphIsEdgeUndirectedOneNode()
         {
             var c = new CompleteGraph(1, Directedness.Undirected);
             var g = new ReverseGraph(c);
@@ -61,7 +61,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void IsEdgeDirected()
+        public void ReverseGraphIsEdgeDirected()
         {
             var c = new CompleteGraph(5, Directedness.Undirected);
             var g = new ReverseGraph(c);
@@ -73,7 +73,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void IsEdgeDirectedOneNode()
+        public void ReverseGraphIsEdgeDirectedOneNode()
         {
             var c = new CompleteGraph(1, Directedness.Undirected);
             var g = new ReverseGraph(c);
@@ -85,7 +85,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void UndirectedAll()
+        public void ReverseGraphUndirectedAll()
         {
             var c = new CompleteGraph(5, Directedness.Undirected);
             var g = new ReverseGraph(c);
@@ -96,7 +96,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void UndirectedAllOneNode()
+        public void ReverseGraphUndirectedAllOneNode()
         {
             var c = new CompleteGraph(1, Directedness.Undirected);
             var g = new ReverseGraph(c);
@@ -107,7 +107,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void UndirectedAllHighNumberOfNodes()
+        public void ReverseGraphUndirectedAllHighNumberOfNodes()
         {
             const int NumOfNodes = 10000;
 
@@ -120,7 +120,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void UndirectedEdge()
+        public void ReverseGraphUndirectedEdge()
         {
             var c = new CompleteGraph(5, Directedness.Undirected);
             var g = new ReverseGraph(c);
@@ -131,7 +131,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void UndirectedEdgeOneNode()
+        public void ReverseGraphUndirectedEdgeOneNode()
         {
             var c = new CompleteGraph(1, Directedness.Undirected);
             var g = new ReverseGraph(c);
@@ -142,7 +142,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void UndirectedEdgeHighNumberOfNodes()
+        public void ReverseGraphUndirectedEdgeHighNumberOfNodes()
         {
             const int NumOfNodes = 10000;
 
@@ -155,7 +155,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void DirectedAll()
+        public void ReverseGraphDirectedAll()
         {
             var c = new CompleteGraph(5, Directedness.Directed);
             var g = new ReverseGraph(c);
@@ -166,7 +166,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void DirectedAllOneNode()
+        public void ReverseGraphDirectedAllOneNode()
         {
             var c = new CompleteGraph(1, Directedness.Directed);
             var g = new ReverseGraph(c);
@@ -177,7 +177,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void DirectedAllHighNumberOfNodes()
+        public void ReverseGraphDirectedAllHighNumberOfNodes()
         {
             const int NumOfNodes = 10000;
 
@@ -190,7 +190,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void DirectedEdge()
+        public void ReverseGraphDirectedEdge()
         {
             var c = new CompleteGraph(5, Directedness.Directed);
             var g = new ReverseGraph(c);
@@ -201,7 +201,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void DirectedEdgeOneNode()
+        public void ReverseGraphDirectedEdgeOneNode()
         {
             var c = new CompleteGraph(1, Directedness.Directed);
             var g = new ReverseGraph(c);
@@ -212,7 +212,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void DirectedEdgeHighNumberOfNodes()
+        public void ReverseGraphDirectedEdgeHighNumberOfNodes()
         {
             const int NumOfNodes = 10000;
 
@@ -225,7 +225,7 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void ArcsInvariant()
+        public void ReverseGraphArcsInvariant()
         {
             var c = new CompleteGraph(5, Directedness.Directed);
             var g = new ReverseGraph(c);
