@@ -81,7 +81,7 @@ namespace Satsuma.Test.tests
 
             int arcs = g.ArcCount(ArcFilter.All);
 
-            Assert.AreEqual(NumOfNodes * 2, arcs);
+            Assert.AreEqual(49995000, arcs);
         }
 
         [TestMethod]
@@ -105,7 +105,7 @@ namespace Satsuma.Test.tests
 
             int arcs = g.ArcCount(ArcFilter.Edge);
 
-            Assert.AreEqual(NumOfNodes * 2, arcs);
+            Assert.AreEqual(49995000, arcs);
         }
 
         [TestMethod]
@@ -120,6 +120,19 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
+        public void DirectedAllHighNumberOfNodes()
+        {
+            const int NumOfNodes = 10000;
+
+            var c = new CompleteGraph(NumOfNodes, Directedness.Directed);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.All);
+
+            Assert.AreEqual(49995000, arcs);
+        }
+
+        [TestMethod]
         public void DirectedEdge()
         {
             var c = new CompleteGraph(5, Directedness.Directed);
@@ -128,6 +141,19 @@ namespace Satsuma.Test.tests
             int arcs = g.ArcCount(ArcFilter.Edge);
 
             Assert.AreEqual(10, arcs);
+        }
+
+        [TestMethod]
+        public void DirectedEdgeHighNumberOfNodes()
+        {
+            const int NumOfNodes = 10000;
+
+            var c = new CompleteGraph(NumOfNodes, Directedness.Directed);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.Edge);
+
+            Assert.AreEqual(49995000, arcs);
         }
 
         [TestMethod]
