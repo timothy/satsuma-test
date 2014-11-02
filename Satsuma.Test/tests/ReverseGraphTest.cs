@@ -59,5 +59,61 @@ namespace Satsuma.Test.tests
                 Assert.IsFalse(g.IsEdge(a));
             }
         }
+
+        [TestMethod]
+        public void UndirectedAll()
+        {
+            var c = new CompleteGraph(5, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.All);
+
+            Assert.AreEqual(10, arcs);
+        }
+
+        [TestMethod]
+        public void UndirectedEdge()
+        {
+            var c = new CompleteGraph(5, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.Edge);
+
+            Assert.AreEqual(10, arcs);
+        }
+
+        [TestMethod]
+        public void DirectedAll()
+        {
+            var c = new CompleteGraph(5, Directedness.Directed);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.All);
+
+            Assert.AreEqual(10, arcs);
+        }
+
+        [TestMethod]
+        public void DirectedEdge()
+        {
+            var c = new CompleteGraph(5, Directedness.Directed);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.Edge);
+
+            Assert.AreEqual(10, arcs);
+        }
+
+        [TestMethod]
+        public void ArcsInvariant()
+        {
+            var c = new CompleteGraph(5, Directedness.Directed);
+            var g = new ReverseGraph(c);
+
+            int arcs = g.ArcCount(ArcFilter.All);
+            int arcs2 = g.ArcCount(ArcFilter.All);
+
+            Assert.AreEqual(arcs2, arcs);
+        }
     }
 }
