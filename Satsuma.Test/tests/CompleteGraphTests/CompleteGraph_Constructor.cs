@@ -10,10 +10,10 @@ using Satsuma;
 namespace Satsuma.Test
 {
 	[TestClass]
-	public class CompleteGraphTest
+	public class CompleteGraph_Constructor
 	{
 		[TestMethod]
-		public void TestCreateUndirected()
+		public void CreateUndirected()
 		{
 			var g = new CompleteGraph(0, Directedness.Undirected);
 
@@ -21,7 +21,7 @@ namespace Satsuma.Test
 		}
 
 		[TestMethod]
-		public void TestCreateDirected()
+		public void CreateDirected()
 		{
 			var g = new CompleteGraph(0, Directedness.Directed);
 
@@ -29,7 +29,7 @@ namespace Satsuma.Test
 		}
 
 		[TestMethod]
-		public void TestZeroNumNodes()
+		public void ZeroNumNodes()
 		{
 			var g = new CompleteGraph(0, Directedness.Undirected);
 
@@ -37,7 +37,7 @@ namespace Satsuma.Test
 		}
 
 		[TestMethod]
-		public void TestOneNumNodes()
+		public void OneNumNodes()
 		{
 			var g = new CompleteGraph(1, Directedness.Undirected);
 
@@ -46,7 +46,7 @@ namespace Satsuma.Test
 
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentException))]
-		public void TesMaxNumNodes()
+		public void MaxNumNodes()
 		{
 			var g = new CompleteGraph(Int32.MaxValue, Directedness.Undirected);
 
@@ -55,7 +55,7 @@ namespace Satsuma.Test
 
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentException))]
-		public void TestNegativeOneException()
+		public void NegativeOneException()
 		{
 			var g = new CompleteGraph(-1, Directedness.Undirected);
 		}
