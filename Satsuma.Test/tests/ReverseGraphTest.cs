@@ -35,5 +35,29 @@ namespace Satsuma.Test.tests
 
             Assert.AreEqual(g.NodeCount(), numofnodes);
         }
+
+        [TestMethod]
+        public void IsEdgeUndirected()
+        {
+            var c = new CompleteGraph(5, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            foreach (Arc a in g.Arcs(ArcFilter.All))
+            {
+                Assert.IsTrue(g.IsEdge(a));
+            }
+        }
+
+        [TestMethod]
+        public void IsEdgeDirected()
+        {
+            var c = new CompleteGraph(5, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            foreach (Arc a in g.Arcs(ArcFilter.All))
+            {
+                Assert.IsFalse(g.IsEdge(a));
+            }
+        }
     }
 }
