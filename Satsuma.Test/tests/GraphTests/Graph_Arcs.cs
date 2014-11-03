@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Satsuma.Test.tests.GraphTests
 {
     [TestClass]
-    public class Arcs
+    public class Graph_Arcs
     {
         [TestMethod]
         public void ArcToStringOverride()
