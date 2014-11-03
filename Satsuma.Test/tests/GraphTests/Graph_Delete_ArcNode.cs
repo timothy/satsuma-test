@@ -1,4 +1,5 @@
-﻿using System;
+﻿// by Wes Thompson
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Satsuma.Test.tests.GraphTests
