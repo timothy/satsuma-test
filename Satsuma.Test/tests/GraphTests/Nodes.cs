@@ -51,16 +51,6 @@ namespace Satsuma.Test.tests.GraphTests
         }
 
         [TestMethod]
-        public void ID_Mult()
-        {
-            var n1 = new Node(10);
-            var n2 = new Node(15);
-            var n3 = new Node(n1.Id * n2.Id);
-
-            Assert.AreEqual(150, n3.Id);
-        }
-
-        [TestMethod]
         public void LongIDToString()
         {
             var n1 = new Node(Int64.MaxValue);
