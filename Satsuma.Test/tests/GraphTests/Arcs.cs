@@ -49,16 +49,6 @@ namespace Satsuma.Test.tests.GraphTests
         }
 
         [TestMethod]
-        public void ArcID_Mult()
-        {
-            var a1 = new Arc(3);
-            var a2 = new Arc(5);
-            var a3 = new Arc(a1.Id * a2.Id);
-
-            Assert.AreEqual(15, a3.Id);
-        }
-
-        [TestMethod]
         public void VeryLongArcID()
         {
             var a1 = new Arc(9223372036854775807);
