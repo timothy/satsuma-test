@@ -64,9 +64,12 @@
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_Nodes.cs" />
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_Constructor.cs" />
     <Compile Include="tests\GraphTests\Graph_Add_ArcNode.cs" />
+    <Compile Include="tests\GraphTests\Graph_ArcCount.cs" />
     <Compile Include="tests\GraphTests\Graph_ArcLookup_IsEdge.cs" />
     <Compile Include="tests\GraphTests\Graph_ArcLookup_UV.cs" />
     <Compile Include="tests\GraphTests\Graph_Arcs.cs" />
+    <Compile Include="tests\GraphTests\Graph_DeletionTests.cs" />
+    <Compile Include="tests\GraphTests\Graph_NodeCount.cs" />
     <Compile Include="tests\GraphTests\Graph_Nodes.cs" />
     <Compile Include="tests\GraphTests\Graph_Delete_ArcNode.cs" />
     <Compile Include="tests\ReverseGraphTest.cs" />

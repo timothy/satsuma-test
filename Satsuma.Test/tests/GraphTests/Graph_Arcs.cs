@@ -60,7 +60,7 @@ namespace Satsuma.Test.tests.GraphTests
         }
 
         [TestMethod]
-        public void ArcID_0()
+        public void ArcID0()
         {
             var a1 = new Arc(0);
 

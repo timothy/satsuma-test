@@ -37,5 +37,6 @@ namespace Satsuma.Test.tests.GraphTests
 
             Assert.IsTrue(g.DeleteNode(n1));
         }
+
     }
 }
