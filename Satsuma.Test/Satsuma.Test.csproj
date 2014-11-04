@@ -63,16 +63,16 @@
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_Arcs_ZeroNodes.cs" />
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_Nodes.cs" />
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_Constructor.cs" />
-    <Compile Include="tests\GraphTests\Graph_Add_ArcNode.cs" />
-    <Compile Include="tests\GraphTests\Graph_ArcCount.cs" />
-    <Compile Include="tests\GraphTests\Graph_ArcLookup_IsEdge.cs" />
-    <Compile Include="tests\GraphTests\Graph_ArcLookup_UV.cs" />
-    <Compile Include="tests\GraphTests\Graph_Arcs.cs" />
-    <Compile Include="tests\GraphTests\Graph_ArcToString.cs" />
-    <Compile Include="tests\GraphTests\Graph_DeletionTests.cs" />
-    <Compile Include="tests\GraphTests\Graph_NodeCount.cs" />
-    <Compile Include="tests\GraphTests\Graph_Nodes.cs" />
-    <Compile Include="tests\GraphTests\Graph_Delete_ArcNode.cs" />
+    <Compile Include="tests\CustomGraphTests\CustomGraph_Add_ArcNode.cs" />
+    <Compile Include="tests\CustomGraphTests\CustomGraph_ArcCount.cs" />
+    <Compile Include="tests\CustomGraphTests\CustomGraph_ArcLookup_IsEdge.cs" />
+    <Compile Include="tests\CustomGraphTests\CustomGraph_ArcLookup_UV.cs" />
+    <Compile Include="tests\ArcTests.cs" />
+    <Compile Include="tests\ArcLookup_Extensions\ArcLookup_Extenstions_ArcToString.cs" />
+    <Compile Include="tests\CustomGraphTests\CustomGraph_DeletionTests.cs" />
+    <Compile Include="tests\CustomGraphTests\CustomGraph_NodeCount.cs" />
+    <Compile Include="tests\NodeTests.cs" />
+    <Compile Include="tests\CustomGraphTests\CustomGraph_Delete_ArcNode.cs" />
     <Compile Include="tests\ReverseGraphTest.cs" />
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_GetNode.cs" />
   </ItemGroup>
