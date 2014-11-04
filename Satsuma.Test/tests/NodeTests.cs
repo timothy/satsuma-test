@@ -1,10 +1,11 @@
-﻿using System;
+﻿// by Wes Thompson
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Satsuma.Test.tests.GraphTests
 {
     [TestClass]
-    public class Nodes
+    public class Graph_Nodes
     {
         [TestMethod]
         public void FalseNodeID()
@@ -48,16 +49,6 @@ namespace Satsuma.Test.tests.GraphTests
             var n1 = new Node(123);
 
             Assert.AreEqual("#123", n1.ToString());
-        }
-
-        [TestMethod]
-        public void ID_Mult()
-        {
-            var n1 = new Node(10);
-            var n2 = new Node(15);
-            var n3 = new Node(n1.Id * n2.Id);
-
-            Assert.AreEqual(150, n3.Id);
         }
 
         [TestMethod]
