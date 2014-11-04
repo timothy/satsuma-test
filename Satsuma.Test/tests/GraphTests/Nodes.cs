@@ -1,16 +1,10 @@
-﻿// by Wes Thompson
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Satsuma;
 
-namespace Satsuma.Test
+namespace Satsuma.Test.tests.GraphTests
 {
     [TestClass]
-    public class GraphTest
+    public class Nodes
     {
         [TestMethod]
         public void FalseNodeID()
@@ -72,14 +66,6 @@ namespace Satsuma.Test
             var n1 = new Node(Int64.MaxValue);
 
             Assert.AreEqual("#" + Int64.MaxValue, n1.ToString());
-        }
-
-        [TestMethod]
-        public void ArcToStringOverride()
-        {
-            var a1 = new Arc(10);
-
-            Assert.AreEqual("|10", a1.ToString());
         }
     }
 }
