@@ -67,6 +67,8 @@ namespace Satsuma.Test.tests.GraphTests
             g.DeleteNode(n1);
 
             Assert.AreEqual("#1--->#2", g.ArcToString(a1));
+
+            // Not sure if bug
         }
 
         [TestMethod]
@@ -79,6 +81,8 @@ namespace Satsuma.Test.tests.GraphTests
             g.DeleteNode(n2);
 
             Assert.AreEqual("#1--->#2", g.ArcToString(a1));
+
+            // Not sure if bug
         }
 
         [TestMethod]
@@ -91,6 +95,8 @@ namespace Satsuma.Test.tests.GraphTests
             g.DeleteNode(n1);
 
             Assert.AreEqual("#1<-->#2", g.ArcToString(a1));
+
+            // Not sure if bug
         }
 
         [TestMethod]
@@ -103,6 +109,8 @@ namespace Satsuma.Test.tests.GraphTests
             g.DeleteNode(n2);
 
             Assert.AreEqual("#1<-->#2", g.ArcToString(a1));
+
+            // Not sure if bug
         }
     }
 }
