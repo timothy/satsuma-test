@@ -13,34 +13,24 @@ namespace Satsuma.Test.tests
     [TestClass]
     public class LayoutTest
     {
-
-
         [TestMethod]
-        public void DistanceTest()// This is testing the Distance method in PointD struct
+        public void DistanceTest()
         {
-
-            var T = new PointD(546.56, 4654.68);//I pass in point X and point Y
-
+            var T = new PointD(546.56, 4654.68);
             var A = new PointD(56.508, 6546.56);
+            double d = T.Distance(A);
 
-            double d = T.Distance(A);// I put my distance into double d
-
-            Assert.AreEqual(d, Math.Sqrt((T.X - A.X) * (T.X - A.X) + (T.Y - A.Y) * (T.Y - A.Y)));// I make sure d has the correct distance
-
+            Assert.AreEqual(d, Math.Sqrt((T.X - A.X) * (T.X - A.X) + (T.Y - A.Y) * (T.Y - A.Y)));
         }
 
         [TestMethod]
-        public void Layouts_Equals_True()// This is testing the Equals method in PointD struct
-        {// Test to make sure Equals true case is working
-
+        public void Layouts_Equals_True()
+        {
             var T = new PointD(556.0086, 556.006);
-
             var A = new PointD(556.0086, 556.006);
-
             bool b = T.Equals(A);
 
             Assert.IsTrue(b);
-
         }
 
         [TestMethod]
@@ -159,6 +149,77 @@ namespace Satsuma.Test.tests
 
         }
 
+        [TestMethod]
+        public void ZeroDistance()// tests that go is 0 Distance from itself
+        {
+            var go = new PointD(4.5, 45.67);
 
+            Assert.IsTrue(go.Distance(go) == 0);
+        }
+
+        [TestMethod]
+        public void DistanceBoundery()//tests max distance and confirms it is greater than 0
+        {
+            var far = new PointD(Double.MaxValue, Double.MaxValue);
+
+            var gothe = new PointD(4.5, 45.67);
+
+            Assert.AreNotEqual(gothe.Distance(far), 0);
+        }
+
+        [TestMethod]
+        public void overloadedOperator1()// This tests the overloaded + operator
+        {
+            var a = new PointD(546.56, 4654.68);
+
+            var b = new PointD(56.508, 6546.56);
+
+            var c = new PointD(a.X + b.X, a.Y + b.Y);
+
+            b += a;
+
+            Assert.AreEqual(b, c);
+
+        }
+
+        [TestMethod]
+        public void overloadedOperator2()// This tests the overloaded == operator true case
+        {
+            var a = new PointD(546.56, 4654.68);
+
+            var b = new PointD(546.56, 4654.68);
+
+            Assert.IsTrue(a == b);
+        }
+
+        [TestMethod]
+        public void overloadedOperator3()// This tests the overloaded plus operator false case
+        {
+            var a = new PointD(546.56, 4654.68);
+
+            var b = new PointD(564.54668, 4654.68);
+
+            Assert.IsFalse(a == b);
+        }
+        [TestMethod]
+        public void overloadedOperator4()// This tests the overloaded not equal != operator false case
+        {
+
+            var a = new PointD(546.56, 4654.68);
+
+            var b = new PointD(546.56, 4654.68);
+
+            Assert.IsFalse(a != b);
+        }
+        [TestMethod]
+        public void overloadedOperator5()// This tests the overloaded not equal != operator true case
+        {
+
+            var a = new PointD(546.56, 4654.68);
+
+            var b = new PointD(546.598786, 4654.68);
+
+            Assert.IsTrue(a != b);
+        }
     }
 }

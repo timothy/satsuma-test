@@ -50,6 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="tests\LayoutTest\PointDTest.cs" />
+    <Compile Include="tests\LayoutTest\ForceDirectedLayoutTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_ArcCount.cs" />
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_ArcLookup_IsEdge.cs" />
