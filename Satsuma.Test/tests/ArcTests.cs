@@ -1,10 +1,11 @@
-﻿using System;
+﻿// by Wes Thompson
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Satsuma.Test.tests.GraphTests
 {
     [TestClass]
-    public class Arcs
+    public class Graph_Arcs
     {
         [TestMethod]
         public void ArcToStringOverride()
@@ -59,7 +60,7 @@ namespace Satsuma.Test.tests.GraphTests
         }
 
         [TestMethod]
-        public void ArcID_0()
+        public void ArcID0()
         {
             var a1 = new Arc(0);
 

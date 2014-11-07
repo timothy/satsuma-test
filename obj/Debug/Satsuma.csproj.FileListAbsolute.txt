@@ -7,7 +7,6 @@ C:\Users\mdraper16\Desktop\test\satsumagraph-code\obj\Debug\Satsuma.pdb
 C:\Users\Wesley\Desktop\satsuma-test\bin\Debug\Satsuma.xml
 C:\Users\Wesley\Desktop\satsuma-test\bin\Debug\Satsuma.dll
 C:\Users\Wesley\Desktop\satsuma-test\bin\Debug\Satsuma.pdb
-C:\Users\Wesley\Desktop\satsuma-test\obj\Debug\Satsuma.csprojResolveAssemblyReference.cache
 C:\Users\Wesley\Desktop\satsuma-test\obj\Debug\Satsuma.dll
 C:\Users\Wesley\Desktop\satsuma-test\obj\Debug\Satsuma.pdb
 C:\Users\James Bond\Documents\CS Projects\QAProject\bin\Debug\Satsuma.xml
