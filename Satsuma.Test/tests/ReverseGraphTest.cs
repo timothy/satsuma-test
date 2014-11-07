@@ -235,5 +235,99 @@ namespace Satsuma.Test.tests
 
             Assert.AreEqual(arcs2, arcs);
         }
+
+        [TestMethod]
+        public void HasAllNodesDirected()
+        {
+            var c = new CompleteGraph(5, Directedness.Directed);
+            var g = new ReverseGraph(c);
+
+            foreach (Node n in g.Nodes())
+            {
+                Assert.IsTrue(g.HasNode(n));
+            }
+        }
+
+        [TestMethod]
+        public void HasAllNodesUndirected()
+        {
+            var c = new CompleteGraph(5, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            foreach (Node n in g.Nodes())
+            {
+                Assert.IsTrue(g.HasNode(n));
+            }
+        }
+
+        [TestMethod]
+        public void NotHaveNodeAboveDirected()
+        {
+            var c = new CompleteGraph(5, Directedness.Directed);
+            var g = new ReverseGraph(c);
+
+            Node n = new Node(6);
+
+            Assert.IsFalse(g.HasNode(n));
+        }
+
+        [TestMethod]
+        public void NotHaveNodeAboveUndirected()
+        {
+            var c = new CompleteGraph(5, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            Node n = new Node(6);
+
+            Assert.IsFalse(g.HasNode(n));
+        }
+
+        [TestMethod]
+        public void NotHaveNodeBelowDirected()
+        {
+            var c = new CompleteGraph(5, Directedness.Directed);
+            var g = new ReverseGraph(c);
+
+            Node n = new Node(-1);
+
+            Assert.IsFalse(g.HasNode(n));
+        }
+
+        [TestMethod]
+        public void NotHaveNodeBelowUndirected()
+        {
+            var c = new CompleteGraph(5, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            Node n = new Node(-1);
+
+            Assert.IsFalse(g.HasNode(n));
+        }
+
+        [TestMethod]
+        public void HasAllArcsUndirected()
+        {
+            var c = new CompleteGraph(5, Directedness.Undirected);
+            var g = new ReverseGraph(c);
+
+            foreach (Arc a in g.Arcs(ArcFilter.All))
+            {
+                Assert.IsTrue(g.HasArc(a));
+            }
+            
+        }
+        [TestMethod]
+        public void HasAllArcsDirected()
+        {
+            var c = new CompleteGraph(5, Directedness.Directed);
+            var g = new ReverseGraph(c);
+
+            foreach (Arc a in g.Arcs(ArcFilter.All))
+            {
+                Assert.IsTrue(g.HasArc(a));
+            }
+        }
+
+
     }
 }
