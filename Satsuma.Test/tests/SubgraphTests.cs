@@ -16,6 +16,16 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
+        public void CreateSubgraph()
+        {
+            var c = new CompleteGraph(5, Directedness.Directed);
+            var g = new Subgraph(c);
+
+            Assert.AreEqual(g.NodeCount(), 5);
+        }
+
+
+        [TestMethod]
         public void CreateSubgraphZeroNode()
         {
             var c = new CompleteGraph(0, Directedness.Directed);
