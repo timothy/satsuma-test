@@ -13,6 +13,7 @@ namespace Satsuma.Test.tests
     [TestClass]
     public class LayoutTest
     {
+        //This is checking the distance based on the formala used
         [TestMethod]
         public void DistanceTest()
         {
@@ -22,7 +23,7 @@ namespace Satsuma.Test.tests
 
             Assert.AreEqual(d, Math.Sqrt((T.X - A.X) * (T.X - A.X) + (T.Y - A.Y) * (T.Y - A.Y)));
         }
-
+        //This is checks the equals operator
         [TestMethod]
         public void Layouts_Equals_True()
         {
@@ -34,9 +35,9 @@ namespace Satsuma.Test.tests
         }
 
         [TestMethod]
-        public void Layouts_Equals_False()// This is testing the Distance method in Layouts class
-        {// Test to make sure Equals false case is working
-
+        public void Layouts_Equals_False()
+        {
+            // Test to make sure Equals false case is working
             var T = new PointD(556.00007, 556.00895);
 
             var A = new PointD(556.0086, 556.006);
@@ -46,61 +47,41 @@ namespace Satsuma.Test.tests
             Assert.IsFalse(b);
 
         }
-
-
         [TestMethod]
-        public void Layouts_GetHashCode_one()// This might be an error in the code. There is very little info in the comments about the GetHashCode() method
-        {// but to my understanding it should always give me the same hash value if I give it the same input.
-            //
-
+        public void Layouts_GetHashCode_one()
+        {
             var T = new PointD(556.00007, 556.00895);
-
 
             int x = T.X.GetHashCode();
             int y = T.Y.GetHashCode();
 
             int i = T.GetHashCode();
 
-
-           // Assert.AreEqual(i, (x * 17) + y);// I have tried both asserts by them selves and each time they come up with different hash values when the input remains the same.
-
             Assert.AreEqual(i, T.GetHashCode());
-
         }
 
         [TestMethod]
-        public void Layouts_GetHashCode_X()// This might be an error in the code. There is very little info in the comments about the GetHashCode() method
-        {// but to my understanding it should always give me the same hash value if I give it the same input.
-            //
-
+        public void Layouts_GetHashCode_X()
+        {
             var T = new PointD(556.00007, 556.00895);
 
             int x = T.X.GetHashCode();
 
-            Assert.AreEqual(x, T.X.GetHashCode());// both values should be the same
+            Assert.AreEqual(x, T.X.GetHashCode());
 
         }
-
         [TestMethod]
-        public void Layouts_ToString()// This might be an error in the code. I am not too sure why this is but I keep getting a new value each time
-        {// for some reason the value of tostring is changing. I would think if the values I store in PointD are constant 
-            //then the value of the twostring should be as well. I do not see 
-
-
+        public void Layouts_ToString()
+        {
             var T = new PointD(556.00007, 556.00895);
 
             string s = T.ToString();
 
-            Assert.AreEqual(s, T.ToString());// both values should be the same
-
+            Assert.AreEqual(s, T.ToString());
         }
-
         [TestMethod]
-        public void PlusOperatorOverrideTest()// 
-        {// the plus operator is should add points A.X and T.X together.
-            //this test should pass. I think something is changing the values in the PointD
-            // it looks to me that PointD should not change the two double values it holds---But some where along the line it is.
-
+        public void PlusOperatorOverrideTest()
+        {
             var T = new PointD(556.00007, 556.00895);
 
             var A = new PointD(556.00007, 556.00895);
@@ -109,56 +90,19 @@ namespace Satsuma.Test.tests
 
             var C = T + A;
 
-            Assert.AreEqual(C.X, D.X);// both values should be the same
-
+            Assert.AreEqual(C.X, D.X);
         }
-
+        // tests that go is 0 Distance from itself
         [TestMethod]
-        public void GetType_Test()// This is making sure that the GetType() method is working
-        {// 
-
-            var T = new PointD(556.0086, 556.006);
-
-            var A = new PointD(556.0086, 556.006);
-
-            Assert.IsInstanceOfType(A, T.GetType());
-
-        }
-
-        [TestMethod]
-        public void GetType_Test_notSame()// This is making sure that the GetType() method is working
-        {// 
-
-            var T = new PointD(556.0086, 556.006);
-
-            var A = "testing if this fails";
-
-
-            Assert.IsNotInstanceOfType(A, T.GetType());
-
-        }
-
-        [TestMethod]
-        public void TestPoint_X_inPointD()// T.X should return a double. This is testing to make sure it does
-        {// 
-
-            var T = new PointD(556.00007, 556.00895);
-
-
-            Assert.IsInstanceOfType(T.X, typeof(double));
-
-        }
-
-        [TestMethod]
-        public void ZeroDistance()// tests that go is 0 Distance from itself
+        public void ZeroDistance()
         {
             var go = new PointD(4.5, 45.67);
 
             Assert.IsTrue(go.Distance(go) == 0);
         }
-
+        //tests max distance and confirms it is greater than 0
         [TestMethod]
-        public void DistanceBoundery()//tests max distance and confirms it is greater than 0
+        public void DistanceBoundery()
         {
             var far = new PointD(Double.MaxValue, Double.MaxValue);
 
@@ -166,9 +110,9 @@ namespace Satsuma.Test.tests
 
             Assert.AreNotEqual(gothe.Distance(far), 0);
         }
-
+        // This tests the overloaded + operator
         [TestMethod]
-        public void overloadedOperator1()// This tests the overloaded + operator
+        public void overloadedOperator1()
         {
             var a = new PointD(546.56, 4654.68);
 
@@ -179,11 +123,10 @@ namespace Satsuma.Test.tests
             b += a;
 
             Assert.AreEqual(b, c);
-
         }
-
+        // This tests the overloaded == operator true case
         [TestMethod]
-        public void overloadedOperator2()// This tests the overloaded == operator true case
+        public void overloadedOperator2()
         {
             var a = new PointD(546.56, 4654.68);
 
@@ -191,9 +134,9 @@ namespace Satsuma.Test.tests
 
             Assert.IsTrue(a == b);
         }
-
+        // This tests the overloaded plus operator false case
         [TestMethod]
-        public void overloadedOperator3()// This tests the overloaded plus operator false case
+        public void overloadedOperator3()
         {
             var a = new PointD(546.56, 4654.68);
 
@@ -201,8 +144,9 @@ namespace Satsuma.Test.tests
 
             Assert.IsFalse(a == b);
         }
+        // This tests the overloaded not equal != operator false case
         [TestMethod]
-        public void overloadedOperator4()// This tests the overloaded not equal != operator false case
+        public void overloadedOperator4()
         {
 
             var a = new PointD(546.56, 4654.68);
@@ -211,8 +155,9 @@ namespace Satsuma.Test.tests
 
             Assert.IsFalse(a != b);
         }
+        // This tests the overloaded not equal != operator true case
         [TestMethod]
-        public void overloadedOperator5()// This tests the overloaded not equal != operator true case
+        public void overloadedOperator5()
         {
 
             var a = new PointD(546.56, 4654.68);
