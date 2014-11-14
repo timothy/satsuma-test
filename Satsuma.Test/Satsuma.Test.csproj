@@ -77,6 +77,7 @@
     <Compile Include="tests\CustomGraphTests\CustomGraph_Delete_ArcNode.cs" />
     <Compile Include="tests\ReverseGraphTest.cs" />
     <Compile Include="tests\CompleteGraphTests\CompleteGraph_GetNode.cs" />
+    <Compile Include="tests\SubgraphTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Satsuma.csproj">

@@ -153,7 +153,7 @@ namespace Satsuma.Test.tests.CompleteGraphTests
 			Assert.AreEqual(arcs1, arcs2);
 		}
 		#endregion
-		#region arcs3
+	#region arcs3
 		[TestMethod]
 		public void NodeToNodeUndirectedAll()
 		{
@@ -245,5 +245,5 @@ namespace Satsuma.Test.tests.CompleteGraphTests
 			Assert.AreEqual(arcs1, arcs2);
 		}
 		#endregion
-	}
+	}	
 }
