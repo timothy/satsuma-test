@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="tests\CompleteBipartiteGraphTests.cs" />
     <Compile Include="tests\LayoutTest\PointDTest.cs" />
     <Compile Include="tests\LayoutTest\ForceDirectedLayoutTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
