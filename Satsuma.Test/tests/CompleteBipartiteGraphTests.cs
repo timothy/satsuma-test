@@ -35,5 +35,41 @@ namespace Satsuma.Test.tests
 
             Assert.AreEqual(5, a.BlueNodeCount);
         }
+        [TestMethod]
+        public void GetBlueNodeU()
+        {
+            var a = new CompleteBipartiteGraph(5, 5, Directedness.Undirected);
+
+            var b = new Node(6);
+
+            Assert.AreEqual(b, a.GetBlueNode(0));
+        }
+        [TestMethod]
+        public void GetRedNodeU()
+        {
+            var a = new CompleteBipartiteGraph(5, 5, Directedness.Undirected);
+
+            var b = new Node(1);
+
+            Assert.AreEqual(b, a.GetRedNode(0));
+        }
+        [TestMethod]
+        public void GetBlueNodeD()
+        {
+            var a = new CompleteBipartiteGraph(5, 5, Directedness.Directed);
+
+            var b = new Node(6);
+
+            Assert.AreEqual(b, a.GetBlueNode(0));
+        }
+        [TestMethod]
+        public void GetRedNodeD()
+        {
+            var a = new CompleteBipartiteGraph(5, 5, Directedness.Directed);
+
+            var b = new Node(1);
+
+            Assert.AreEqual(b, a.GetRedNode(0));
+        }
     }
 }
