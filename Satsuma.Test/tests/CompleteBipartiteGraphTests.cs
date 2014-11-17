@@ -6,6 +6,7 @@ namespace Satsuma.Test.tests
     [TestClass]
     public class CompleteBipartiteGraphTests
     {
+        //The following tests are testing within bounds of methods
         [TestMethod]
         public void RedNodeCountU()
         {
@@ -70,6 +71,34 @@ namespace Satsuma.Test.tests
             var b = new Node(1);
 
             Assert.AreEqual(b, a.GetRedNode(0));
+        }
+        [TestMethod]
+        public void IsRedT()
+        {
+            var a = new CompleteBipartiteGraph(5, 5, Directedness.Directed);
+
+            var b = new Node(0);
+
+            Assert.AreEqual(true, a.IsRed(b));
+        }
+        [TestMethod]
+        public void IsRedF()
+        {
+            var a = new CompleteBipartiteGraph(5, 5, Directedness.Directed);
+
+            var b = new Node(6);
+
+            Assert.AreEqual(false, a.IsRed(b));
+        }
+        [TestMethod]
+        public void GetArcInvalide()
+        {
+            var a = new CompleteBipartiteGraph(5, 5, Directedness.Directed);
+
+            var b = new Node(6);
+            var c = new Node(6);
+
+            Assert.AreEqual(Arc.Invalid, a.GetArc(b, c));
         }
     }
 }
