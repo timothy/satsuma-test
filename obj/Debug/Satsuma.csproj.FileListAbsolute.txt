@@ -21,3 +21,8 @@ C:\Users\tbradford16\Desktop\satsuma-test\bin\Debug\Satsuma.pdb
 C:\Users\tbradford16\Desktop\satsuma-test\obj\Debug\Satsuma.csprojResolveAssemblyReference.cache
 C:\Users\tbradford16\Desktop\satsuma-test\obj\Debug\Satsuma.dll
 C:\Users\tbradford16\Desktop\satsuma-test\obj\Debug\Satsuma.pdb
+C:\Users\Matthew\Desktop\satsumagraph-code\bin\Debug\Satsuma.xml
+C:\Users\Matthew\Desktop\satsumagraph-code\bin\Debug\Satsuma.dll
+C:\Users\Matthew\Desktop\satsumagraph-code\bin\Debug\Satsuma.pdb
+C:\Users\Matthew\Desktop\satsumagraph-code\obj\Debug\Satsuma.dll
+C:\Users\Matthew\Desktop\satsumagraph-code\obj\Debug\Satsuma.pdb

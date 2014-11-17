@@ -104,7 +104,7 @@ namespace Satsuma.Test.tests
         //The following tests are testing outside the bounds
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void CompleteBipartiteGraphMaxOutOfRang()
         {
             var a = new CompleteBipartiteGraph(Int32.MaxValue, Int32.MaxValue, Directedness.Undirected);
@@ -112,7 +112,7 @@ namespace Satsuma.Test.tests
             Assert.AreEqual(Int32.MaxValue, a.RedNodeCount);
         }
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void CompleteBipartiteGraphMinOutOfRang()
         {
             var a = new CompleteBipartiteGraph(Int32.MinValue, Int32.MinValue, Directedness.Undirected);
