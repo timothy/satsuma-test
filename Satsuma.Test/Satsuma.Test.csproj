@@ -50,7 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="tests\CompleteBipartiteGraphTests.cs" />
+    <Compile Include="tests\CompleteBipatiteGraphTests\CompletBipatiteGraph_ArcCount.cs" />
+    <Compile Include="tests\CompleteBipatiteGraphTests\CompleteBipartiteGraphTests.cs" />
     <Compile Include="tests\LayoutTest\PointDTest.cs" />
     <Compile Include="tests\LayoutTest\ForceDirectedLayoutTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
