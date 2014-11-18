@@ -233,6 +233,16 @@ namespace Satsuma.Test.tests.CompleteBipatiteGraphTests
         }
 
         [TestMethod]
+        public void NodeToNodeDirectedExpectTwo()
+        {
+            var g = new CompleteBipartiteGraph(5, 5, Directedness.Directed);
+
+            int arcs = g.ArcCount(g.GetRedNode(0), g.GetBlueNode(0), ArcFilter.All);
+
+            Assert.AreEqual(2, arcs);
+        }
+
+        [TestMethod]
         public void NodeToNodeArcsInvariant()
         {
             var g = new CompleteBipartiteGraph(5, 5, Directedness.Undirected);
